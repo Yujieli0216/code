@@ -73,7 +73,7 @@ while iter1<3*r
     A=zeros(nn0,nn0);
     b=zeros(nn0,1);
     
-    [y,fval,exitflag]=quadprog1(-H,f,A,b,Aeq,beq,[],[],X(i,:)',optimset('Display','off'));
+    [y,fval,exitflag]=quadprog1(-H,f,A,b,Aeq,beq,b,[],X(i,:)',optimset('Display','off'));
 
     obj1(1,iter1)=exitflag; 
     obj1(2,iter1)=fval; 
